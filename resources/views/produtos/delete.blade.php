@@ -1,17 +1,16 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Excluir um produto</title>
-</head>
-<body>
+@extends('template')
+
+@section('main')
+
+<div class="container">
   <form action="{{ route('excluir_produto', ['id' => $produto -> id]) }}" method="POST">
     @csrf
-    <label for="">Tem certeza que deseja excluir este produto?</label> <br />
-    <input type="text" name="nome" value="{{$produto->nome}}"> <br />
-    <button>Sim</button>
+    <div class="col text-center">
+    <label for="" class="mt-5">Tem certeza que deseja excluir este produto?</label> <br />
+    <input type="text" name="nome" class="form-control mt-3" value="{{$produto->nome}}"> <br />
+        <button class="btn btn-primary mt-3">Confirma</button>      
+    </div>
   </form>
-</body>
-</html>
+</div>
+
+@endsection

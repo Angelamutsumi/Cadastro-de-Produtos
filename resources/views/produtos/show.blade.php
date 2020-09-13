@@ -1,20 +1,18 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Ver produto</title>
-</head>
-<body>
-    <label for="">Nome</label> <br />
-    <input type="text" name="nome" value="{{ $produto->nome}}"> <br />
+@extends('template')
+
+@section('main')
+
+<div class="container">
+
+
+    <label for="" class="mt-5">Nome</label> <br />
+    <input type="text" name="nome" class="form-control " value="{{ $produto->nome}}"> <br />
     <label for="">Custo</label> <br />
-    <input type="text" name="custo" value="{{ $produto->custo}}"> <br />
+    <input type="text" name="custo" class="form-control" value="{{ $produto->custo}}"> <br />
     <label for="">Preço</label> <br />
-    <input type="text" name="preco" value="{{ $produto->preco}}"> <br />
+    <input type="text" name="preco" class="form-control" value="{{ $produto->preco}}"> <br />
     <label for="">Quantidade</label> <br />
-    <input type="text" name="quantidade" value="{{ $produto->quantidade}}"> <br />
-  </form>
-</body>
-</html>
+    <input type="text" name="quantidade" class="form-control" value="{{ $produto->quantidade}}"> <br />
+  
+  </div>
+  @endsection
